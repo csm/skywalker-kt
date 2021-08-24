@@ -13,7 +13,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1"
     implementation "com.daveanthonythomas.moshipack:moshipack:1.0.1"
-    implementation "com.boundary:high-scale-lib:1.0.6"
-    implementation "com.squareup.okio:okio:2.10.0"
+    implementation project(':skywalker-client')
     implementation project(':skywalker-core')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
 }

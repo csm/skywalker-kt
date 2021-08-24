@@ -24,7 +24,7 @@ class LocalJunction<K, V>: Junction<K, V> {
 
     private fun getChans(id: K): Channel<Channel<V>> = channels.get(id)
 
-    override suspend fun send(id: K, message: V, timeout: Duration): Unit = coroutineScope{
+    override suspend fun send(id: K, message: V, timeout: Duration): Unit = coroutineScope {
         withTimeout(timeout) {
             val chans = getChans(id)
             val chan = chans.receive();

@@ -1,4 +1,4 @@
 rootProject.name = 'skywalker'
 include 'skywalker-core'
 include 'skywalker-client'
-
+include 'skywalker-server'
